@@ -42,6 +42,7 @@ const App = (() => {
     initStandaloneReader();
     initFaqAccordion();
     initModals();
+    initMobileMenu();
     updateBookmarkBadge();
   };
 
@@ -1993,6 +1994,49 @@ const App = (() => {
   const closeGuideModal = () => {
     const guideModal = document.getElementById('guide-modal');
     if (guideModal) guideModal.classList.remove('active');
+  };
+
+  const initMobileMenu = () => {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    if (!mobileToggle) return;
+
+    let drawer = document.getElementById('mobile-nav-drawer');
+    if (!drawer) {
+      drawer = document.createElement('div');
+      drawer.id = 'mobile-nav-drawer';
+      drawer.className = 'mobile-nav-drawer';
+      drawer.innerHTML = `
+        <button class="mobile-nav-drawer-close" id="mobile-drawer-close" aria-label="Close Navigation Menu">&times;</button>
+        <ul class="mobile-nav-drawer-links">
+          <li><a href="index.html" class="mobile-nav-drawer-link">Home Overview</a></li>
+          <li><a href="blueprints.html" class="mobile-nav-drawer-link">Store Blueprints</a></li>
+          <li><a href="logistics.html" class="mobile-nav-drawer-link">Fulfillment Matrix</a></li>
+          <li><a href="calculators.html" class="mobile-nav-drawer-link">Profit Engines</a></li>
+          <li><a href="suppliers.html" class="mobile-nav-drawer-link">Verified Suppliers</a></li>
+          <li><a href="faq.html" class="mobile-nav-drawer-link">Knowledge Base FAQ</a></li>
+          <li><a href="https://www.profitableratecpmnetwork.com/amspcnscr?key=47a7763944a29938f61984e3f44174b0" target="_blank" rel="noopener noreferrer" class="mobile-nav-drawer-link" style="color:var(--accent-cyan-bright); font-weight:800;">🔥 VIP Partner Deals &rarr;</a></li>
+        </ul>
+      `;
+      document.body.appendChild(drawer);
+
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          drawer.classList.remove('active');
+        });
+      }
+
+      drawer.querySelectorAll('.mobile-nav-drawer-link').forEach(link => {
+        link.addEventListener('click', () => {
+          drawer.classList.remove('active');
+        });
+      });
+    }
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      drawer.classList.toggle('active');
+    });
   };
 
   // Public API
