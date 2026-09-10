@@ -1,5 +1,5 @@
-/**
- * AETHERDROP - ANTI-GRAVITY E-COMMERCE & DROPSHIPPING RESOURCE HUB
+﻿/**
+ * RS - ANTI-GRAVITY E-COMMERCE & DROPSHIPPING RESOURCE HUB
  * Interactive Physics, Calculators, Blueprints & Dynamic Telemetry
  */
 
@@ -9,7 +9,7 @@ const App = (() => {
   // --- Safe LocalStorage State Retrieval ---
   let initialBookmarks = [];
   try {
-    initialBookmarks = JSON.parse(localStorage.getItem('aetherdrop_bookmarks') || '[]');
+    initialBookmarks = JSON.parse(localStorage.getItem('RS_bookmarks') || '[]');
   } catch (err) {
     initialBookmarks = [];
   }
@@ -29,21 +29,32 @@ const App = (() => {
 
   // --- Initialize Application ---
   const init = () => {
-    initCanvasGravity();
-    init3DTilt();
-    initProfitCalculator();
-    initShippingCalculator();
-    initNicheScanner();
-    initTutorialFilters();
-    initGuideModals();
-    initBookmarks();
-    initSupplierSearch();
-    initPipelineVisualizer();
-    initStandaloneReader();
-    initFaqAccordion();
-    initModals();
-    initMobileMenu();
-    updateBookmarkBadge();
+    const modules = [
+      ['initCanvasGravity', initCanvasGravity],
+      ['init3DTilt', init3DTilt],
+      ['initProfitCalculator', initProfitCalculator],
+      ['initShippingCalculator', initShippingCalculator],
+      ['initNicheScanner', initNicheScanner],
+      ['initTutorialFilters', initTutorialFilters],
+      ['initGuideModals', initGuideModals],
+      ['initBookmarks', initBookmarks],
+      ['initSupplierSearch', initSupplierSearch],
+      ['initPipelineVisualizer', initPipelineVisualizer],
+      ['initStandaloneReader', initStandaloneReader],
+      ['initFaqAccordion', initFaqAccordion],
+      ['initModals', initModals],
+      ['initMobileMenu', initMobileMenu],
+      ['initTimedMonetizationEngine', initTimedMonetizationEngine],
+      ['updateBookmarkBadge', updateBookmarkBadge]
+    ];
+
+    modules.forEach(([name, fn]) => {
+      try {
+        if (typeof fn === 'function') fn();
+      } catch (err) {
+        console.warn(`[RS] Module ${name} encountered an issue:`, err);
+      }
+    });
   };
 
   // =========================================================================
@@ -61,8 +72,8 @@ const App = (() => {
       height = canvas.height = window.innerHeight;
     });
 
-    const particles = [];
-    const numParticles = Math.min(Math.floor((width * height) / 16000), 75);
+    const isMobile = window.innerWidth < 768;
+    const numParticles = isMobile ? 18 : Math.min(Math.floor((width * height) / 16000), 65);
 
     let mouse = { x: width / 2, y: height / 2, active: false };
 
@@ -75,6 +86,8 @@ const App = (() => {
     window.addEventListener('mouseleave', () => {
       mouse.active = false;
     });
+
+    const particles = [];
 
     class Particle {
       constructor() {
@@ -131,7 +144,9 @@ const App = (() => {
       particles.push(new Particle());
     }
 
+    let isAnimationActive = true;
     const animate = () => {
+      if (!isAnimationActive) return;
       ctx.clearRect(0, 0, width, height);
 
       // Connect nearby particles with subtle zero-gravity filaments
@@ -158,7 +173,19 @@ const App = (() => {
       requestAnimationFrame(animate);
     };
 
-    animate();
+    // Page Visibility API: Pause animation in background to guarantee Zero-G Speed & save battery
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        isAnimationActive = false;
+      } else {
+        if (!isAnimationActive) {
+          isAnimationActive = true;
+          requestAnimationFrame(animate);
+        }
+      }
+    });
+
+    requestAnimationFrame(animate);
   };
 
   // =========================================================================
@@ -542,7 +569,7 @@ const App = (() => {
       showToast('Guide saved to your offline blueprint vault! ⭐');
     }
     try {
-      localStorage.setItem('aetherdrop_bookmarks', JSON.stringify(state.bookmarks));
+      localStorage.setItem('RS_bookmarks', JSON.stringify(state.bookmarks));
     } catch (e) {
       // Ignore localStorage errors
     }
@@ -673,7 +700,7 @@ const App = (() => {
             <div class="badge-tag cyan" style="margin-bottom:0.5rem;">
               <span>${guide.badge}</span>
             </div>
-            <h2 style="font-size:1.45rem; color:#fff; line-height:1.3;">${guide.title}</h2>
+            <h2 class="bp-modal-main-title">${guide.title}</h2>
           </div>
 
           <a href="#" 
@@ -776,7 +803,34 @@ const App = (() => {
     }
 
     // Update document title
-    document.title = `${guide.title} — 10-Page Master SOP (AetherDrop)`;
+    document.title = `${guide.title} — 10-Page Master SOP (RS)`;
+
+    // Update dynamic JSON-LD schema for AI Answer Engines & Search Bots
+    const schemaEl = document.getElementById('guide-jsonld-schema');
+    if (schemaEl) {
+      schemaEl.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": guide.title,
+        "description": (guide.badge || 'RS Blueprint') + ' — 10-page masterclass standard operating procedure and scaling framework.',
+        "url": `https://RS.vercel.app/guide.html?id=${guide.id}`,
+        "author": {
+          "@type": "Organization",
+          "name": "RS Intelligence",
+          "url": "https://RS.vercel.app/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "RS",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://RS.vercel.app/logo.png"
+          }
+        },
+        "mainEntityOfPage": `https://RS.vercel.app/guide.html?id=${guide.id}`,
+        "inLanguage": "en-US"
+      });
+    }
 
     // Update PDF action slot
     const pdfSlot = document.getElementById('standalone-pdf-action-slot');
@@ -859,13 +913,13 @@ const App = (() => {
             <div class="badge-tag cyan" style="margin-bottom:0.5rem;">
               <span>${guide.badge || 'Confidential SOP'}</span>
             </div>
-            <h1 style="font-size:1.85rem; color:#fff; line-height:1.3; margin:0;">${guide.title}</h1>
+            <h1 class="bp-standalone-main-title">${guide.title}</h1>
           </div>
         </div>
 
         ${pillsHtml}
 
-        <div class="bp-page-display-wrap">
+        <div class="bp-page-display-wrap ag-reading-core">
           ${pagesHtml}
         </div>
 
@@ -1121,7 +1175,7 @@ const App = (() => {
   <div class="top-action-bar no-print">
     <div class="bar-brand">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <div>AetherDrop <span>10-Page Blueprint System</span></div>
+      <div>RS <span>10-Page Blueprint System</span></div>
     </div>
     <div style="display:flex; align-items:center; gap:12px;">
       <span style="color:#94a3b8; font-size:13px;">10 Distinct Printable Pages</span>
@@ -1136,7 +1190,7 @@ const App = (() => {
     ${pages.map((p) => `
       <div class="pdf-page" id="page-${p.pageNumber}">
         <div class="page-running-header">
-          <div>AETHERDROP • 7-FIGURE OPERATOR FRAMEWORK</div>
+          <div>RS • 7-FIGURE OPERATOR FRAMEWORK</div>
           <div>${guide.title}</div>
         </div>
         
@@ -1151,7 +1205,7 @@ const App = (() => {
         </div>
 
         <div class="page-running-footer">
-          <div>© 2026 AetherDrop Resource Hub • Confidential E-Commerce Operator Manual</div>
+          <div>© 2026 RS Resource Hub • Confidential E-Commerce Operator Manual</div>
           <div><strong>Page ${p.pageNumber} of ${pages.length}</strong></div>
         </div>
       </div>
@@ -1372,7 +1426,7 @@ const App = (() => {
   <div class="top-action-bar no-print">
     <div class="bar-brand">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      <div>AetherDrop <span>Starter Vault Master System</span></div>
+      <div>RS <span>Starter Vault Master System</span></div>
     </div>
     <div style="display:flex; align-items:center; gap:12px;">
       <span style="color:#94a3b8; font-size:13px;">10 Distinct Printable Pages</span>
@@ -1387,7 +1441,7 @@ const App = (() => {
     ${pages.map((p) => `
       <div class="pdf-page" id="page-${p.pageNumber}">
         <div class="page-running-header">
-          <div>AETHERDROP • 7-FIGURE MASTER OPERATING SYSTEM</div>
+          <div>RS • 7-FIGURE MASTER OPERATING SYSTEM</div>
           <div>${vault.title}</div>
         </div>
         
@@ -1402,7 +1456,7 @@ const App = (() => {
         </div>
 
         <div class="page-running-footer">
-          <div>© 2026 AetherDrop Resource Hub • Turnkey Master Operating System</div>
+          <div>© 2026 RS Resource Hub • Turnkey Master Operating System</div>
           <div><strong>Page ${p.pageNumber} of ${pages.length}</strong></div>
         </div>
       </div>
@@ -1416,7 +1470,7 @@ const App = (() => {
     const downloadAnchor = document.createElement('a');
 
     downloadAnchor.href = objectUrl;
-    downloadAnchor.download = 'aetherdrop_7figure_starter_vault_10_page_master_2026.html';
+    downloadAnchor.download = 'RS_7figure_starter_vault_10_page_master_2026.html';
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
 
@@ -1516,34 +1570,13 @@ const App = (() => {
       }
     });
 
-    // Close on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.active').forEach((m) => m.classList.remove('active'));
-      }
-    });
-
-    // Mobile Navigation Drawer Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    if (mobileToggle && navMenu) {
-      mobileToggle.addEventListener('click', () => {
-        const isHidden = window.getComputedStyle(navMenu).display === 'none';
-        navMenu.style.display = isHidden ? 'flex' : 'none';
-        if (isHidden) {
-          navMenu.style.flexDirection = 'column';
-          navMenu.style.position = 'absolute';
-          navMenu.style.top = '100%';
-          navMenu.style.left = '0';
-          navMenu.style.width = '100%';
-          navMenu.style.background = 'rgba(11, 15, 29, 0.95)';
-          navMenu.style.padding = '1.5rem';
-          navMenu.style.borderRadius = '16px';
-          navMenu.style.border = '1px solid rgba(255,255,255,0.1)';
+      // Close on Escape key
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.modal-overlay.active').forEach((m) => m.classList.remove('active'));
         }
       });
-    }
-  };
+    };
 
   const handleLeadSubmit = (e) => {
     if (e && e.preventDefault) e.preventDefault();
@@ -2037,6 +2070,61 @@ const App = (() => {
       e.stopPropagation();
       drawer.classList.toggle('active');
     });
+  };
+
+  // =========================================================================
+  // 15. 10-Second Timed Flash Notification Engine
+  // =========================================================================
+  const initTimedMonetizationEngine = () => {
+    const DURATION_SECONDS = 10;
+
+    // Render 10-Second Flash Notification Box
+    const banner = document.createElement('div');
+    banner.id = 'timed-flash-ad-banner';
+    banner.className = 'timed-flash-banner';
+    banner.innerHTML = `
+      <div class="timed-flash-content">
+        <div class="timed-flash-badge">
+          <span class="pulse-dot"></span>
+          <span>LIMITED OFFER (<span id="flash-timer-count">${DURATION_SECONDS}s</span>)</span>
+        </div>
+        <div class="timed-flash-title">⚡ Claim VIP Fast-Track Supplier Registry & Sourcing Deals</div>
+        <a href="https://www.profitableratecpmnetwork.com/amspcnscr?key=47a7763944a29938f61984e3f44174b0" target="_blank" rel="noopener noreferrer" class="timed-flash-cta">
+          Access Now &rarr;
+        </a>
+      </div>
+      <button class="timed-flash-close" aria-label="Close Ad" onclick="document.getElementById('timed-flash-ad-banner')?.remove()">&times;</button>
+      <div class="timed-flash-progress"><div class="timed-flash-bar" id="flash-progress-bar"></div></div>
+    `;
+    document.body.appendChild(banner);
+
+    // Animate progress bar across 10 seconds
+    const progressBar = document.getElementById('flash-progress-bar');
+    if (progressBar) {
+      progressBar.style.transition = `width ${DURATION_SECONDS}s linear`;
+      requestAnimationFrame(() => {
+        progressBar.style.width = '0%';
+      });
+    }
+
+    // Count down 10 seconds
+    let remaining = DURATION_SECONDS;
+    const timerInterval = setInterval(() => {
+      remaining -= 1;
+      const countEl = document.getElementById('flash-timer-count');
+      if (countEl) countEl.textContent = `${remaining}s`;
+
+      if (remaining <= 0) {
+        clearInterval(timerInterval);
+
+        // Smoothly dismiss floating notification
+        const activeBanner = document.getElementById('timed-flash-ad-banner');
+        if (activeBanner) {
+          activeBanner.classList.add('fade-out');
+          setTimeout(() => activeBanner.remove(), 450);
+        }
+      }
+    }, 1000);
   };
 
   // Public API

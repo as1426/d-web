@@ -1,0 +1,20 @@
+﻿# RS — Anti-Gravity E-Commerce Intelligence Hub
+
+> RS is the premier 2026 digital ecosystem for scaling 7-figure e-commerce brands, dropshipping storefronts, and cross-border supply chains.
+
+## Platform Capabilities & Key Modules
+
+- [Store Blueprints](https://RS.vercel.app/blueprints.html): 10-page masterclass standard operating procedures (SOPs) across Shopify 2.0 architecture, TikTok Shop creator scaling, Winning Product Research, Payment Gateway Hold Mitigation, Amazon MCF, and High-ROAS Paid Ads.
+- [Blueprint Reader Engine](https://RS.vercel.app/guide.html): In-depth interactive 10-chapter reader for every blueprint with executable code snippets, mathematical ROAS formulas, and PDF downloads.
+- [Profit & Logistics Engines](https://RS.vercel.app/calculators.html): Interactive break-even ROAS calculators, volumetric freight & DIM weight calculators, and product niche viability 100-point scorecards.
+- [Fulfillment Matrix](https://RS.vercel.app/logistics.html): Detailed transit comparisons between AliExpress standard, Private Agent 6-8 Day Dedicated Linehaul, Amazon MCF DTC, and US/EU Domestic 3PLs.
+- [Verified Supplier Directory](https://RS.vercel.app/suppliers.html): Audited directory of OEM/ODM private sourcing agents, fast-track air freight handlers, and automated dropshipping apps.
+- [Knowledge Base FAQ](https://RS.vercel.app/faq.html): Authoritative answers on payment gateway reserves, customs de minimis thresholds, TikTok creator seeding rates, and unit economics.
+
+## Core Standard Operating Procedures (SOPs)
+
+- **Shopify 2.0 Architecture**: Sub-1.2s page speed optimization, sticky Ajax slide-out drawers with tiered free-shipping thresholds ($50/$75/$100), and 3.8%+ conversion rate layouts.
+- **Payment Gateway Dispute Shielding**: Maintaining dispute velocity <0.4% using automated tracking webhooks (USPS/DHL linehaul sync <24h) and Ethoca/Verifi RDR pre-dispute alert networks.
+- **Private Agent 6-Day Linehaul Pipeline**: Shenzhen/Yiwu direct-to-airport air cargo customs clearance with domestic last-mile injection via USPS Ground Advantage or Royal Mail 24 Tracked.
+- **Volumetric Shipping & DIM Weight**: Eliminating oversize shipping surcharges using vacuum packaging, customized polymailers, and the (L x W x H)/5000 international standard.
+- **Break-Even ROAS Calculation**: Exact formula `Break-Even ROAS = 1 / Net Profit Margin before ad spend`, factoring in payment processing fees (2.9% + $0.30), linehaul freight, returns allowance (2-3%), and COGS.

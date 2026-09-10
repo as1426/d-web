@@ -1,5 +1,5 @@
-/**
- * AETHERDROP - COMPREHENSIVE 10-PAGE BLUEPRINT DATA REPOSITORY
+﻿/**
+ * RS - COMPREHENSIVE 10-PAGE BLUEPRINT DATA REPOSITORY
  * Exhaustive, 10-Chapter Masterclass Blueprints for High-Volume E-Commerce Operators
  * Each Guide contains 10 fully articulated, non-fluff pages with SOPs, Scripts, Tables & Formulas.
  */
@@ -19,7 +19,7 @@ window.GUIDES_DATA = {
         chapterSubtitle: 'Architecting 3.8%+ Conversion Rate Storefronts for High-Volume DTC Scale',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">High-Converting Shopify Store Architecture</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Engineering Manual: From Initial Setup to $100,000/Month Operational Scale</h3>
             
@@ -80,6 +80,13 @@ window.GUIDES_DATA = {
             </ol>
           </div>
 
+          <div class="bp-callout cyan" style="margin-top:1.25rem;">
+            <strong>FAST-TRACK SETUP PROTOCOL:</strong> To deploy an optimized Shopify 2.0 store architecture with pre-configured high-converting drawer carts, 
+            <a href="https://www.profitableratecpmnetwork.com/amspcnscr?key=47a7763944a29938f61984e3f44174b0" target="_blank" rel="noopener sponsored" class="smartlink-action-pill" style="margin-top:0.35rem;">
+              <span>⚡ Click here to set up your Shopify Starter Store & VIP Toolkit &rarr;</span>
+            </a>
+          </div>
+
           <h4 style="margin-top:1.5rem;">1.2 Mathematical Impact of Tiered Free-Shipping Thresholds on AOV</h4>
           <table class="bp-table">
             <thead>
@@ -104,7 +111,7 @@ window.GUIDES_DATA = {
                 <td>$1,029.00</td>
               </tr>
               <tr class="highlight">
-                <td><strong>AetherDrop Tiered Progress Drawer ($50/$75/$100)</strong></td>
+                <td><strong>RS Tiered Progress Drawer ($50/$75/$100)</strong></td>
                 <td><strong>$59.40 (+41.4%)</strong></td>
                 <td><strong>3.68% (+50.2%)</strong></td>
                 <td><strong>$2,185.92 (+212%)</strong></td>
@@ -195,7 +202,7 @@ function updateCartThreshold(cartTotalCents) {
               <tr>
                 <th>Optimization Layer</th>
                 <th>Traditional Bloated Approach</th>
-                <th>AetherDrop 2026 High-Speed Protocol</th>
+                <th>RS 2026 High-Speed Protocol</th>
               </tr>
             </thead>
             <tbody>
@@ -670,7 +677,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The 200-Creator Sample Seeding Engine & Organic Video Distribution Machine',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">The TikTok Shop Scaling & Viral Hook Framework</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Operational Manual: Generating 60–120 High-Converting Organic Video Assets Per Month Without Upfront Ad Spend</h3>
             
@@ -909,6 +916,13 @@ function updateCartThreshold(cartTotalCents) {
 
           <h4 style="margin-top:1.5rem;">4.2 Reducing Landed Sample Costs</h4>
           <p>Negotiate bulk sample stock with your CJdropshipping agent or factory. Purchasing 300 units upfront into CJ’s domestic warehouse reduces per-unit costs from $8.50 to $4.90, allowing you to seed 200 creators for under $2,000 in total monthly inventory expense.</p>
+
+          <div class="bp-callout cyan" style="margin-top:1.25rem;">
+            <strong>SOURCING AUTOMATION:</strong> 
+            <a href="https://www.profitableratecpmnetwork.com/raa6g43e7?key=d077db20104c8704ab93a1ee9ddb90ee" target="_blank" rel="noopener sponsored" class="smartlink-action-pill" style="margin-top:0.35rem;">
+              <span>🚀 Access our recommended CJdropshipping settings for sourcing pet accessories & VIP linehaul &rarr;</span>
+            </a>
+          </div>
         `
       },
       {
@@ -1183,7 +1197,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The Quantitative 7-Filter Algorithm for Discovering High-Margin Blue Ocean Winners',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Winning Product Research Matrix</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Scientific Validation Manual: Eliminating Guesswork with 7 Non-Negotiable Screening Filters</h3>
             
@@ -1267,6 +1281,13 @@ function updateCartThreshold(cartTotalCents) {
               </tr>
             </tbody>
           </table>
+
+          <div class="bp-callout cyan" style="margin-top:1.25rem;">
+            <strong>LIVE PRODUCT RADAR:</strong> Skip manual research and 
+            <a href="https://www.profitableratecpmnetwork.com/amspcnscr?key=47a7763944a29938f61984e3f44174b0" target="_blank" rel="noopener sponsored" class="smartlink-action-pill" style="margin-top:0.35rem;">
+              <span>🔥 Access our Live Winning Product Radar & Margin Spy Database &rarr;</span>
+            </a>
+          </div>
         `
       },
       {
@@ -1483,7 +1504,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'Deploying Amazon Prime 2-Day Delivery Speeds for Independent DTC Storefronts',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Amazon Multi-Channel Fulfillment (MCF) for Shopify DTC</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Engineering Manual: Unifying Inventory Across Shopify, TikTok Shop & Amazon FBA</h3>
             
@@ -1685,7 +1706,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The Modular Creative Production Engine for 4.0+ Blended ROAS Scaling',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">High-ROAS Meta & TikTok Ad Creative Frameworks</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Production & Media Buying Manual: Building High-Velocity Direct Response Ad Creative</h3>
             
@@ -1855,7 +1876,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The High-Volume Merchant Infrastructure for Zero Rolling Reserves and Dispute Shielding',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Unlocking High-Volume Payment Gateways & Dispute Shielding</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Compliance Manual: Protecting Cash Flow, Eliminating Holds & Maintaining Dispute Velocity &lt;0.4%</h3>
             
@@ -2004,7 +2025,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The 6-Day Doorstep Lifecycle: Factory Direct Sourcing, Pre-Flight QC & Dedicated Air Freight',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP SUPPLY CHAIN FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS SUPPLY CHAIN FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Private Sourcing Agent & 6-Day Linehaul Pipeline SOP</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Logistics Engineering Manual: Replacing Slow Retail Dropshipping with Dedicated Linehaul Air Cargo</h3>
             
@@ -2185,7 +2206,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The Automated Entry-Level Sourcing Playbook for Zero-Capital Testing',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP OPERATOR FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS OPERATOR FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Automated Platform Sourcing & Multi-Channel Scaling</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Operational Guide to AliExpress, DSers & Automated Catalog Sourcing</h3>
             <div class="bp-callout cyan">
@@ -2232,7 +2253,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'Scaling Enterprise DTC Brands with 2-Day Nationwide Ground Fulfillment',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP ENTERPRISE FRAMEWORK • 2026 EDITION</div>
+            <div class="bp-tag">RS ENTERPRISE FRAMEWORK • 2026 EDITION</div>
             <h1 class="bp-title">Enterprise Domestic 3PL Warehousing & 2-Day Delivery</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Guide to US & EU Local Warehousing, Freight Forwarding & 2-Day Fulfillment</h3>
             <div class="bp-callout cyan">
@@ -2279,7 +2300,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'Mastering Break-Even ROAS, Landed Margins & Cash Conversion Cycles',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP FINANCIAL MATRIX • 2026 EDITION</div>
+            <div class="bp-tag">RS FINANCIAL MATRIX • 2026 EDITION</div>
             <h1 class="bp-title">E-Commerce Financial Engineering & Margin Matrix</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Mathematical Guide to Profitable Paid Ad Scaling & Cash Flow Management</h3>
             <div class="bp-callout cyan">
@@ -2326,7 +2347,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'Eliminating Volumetric Dimensional Weight Penalties on International Air Lines',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP LOGISTICS MATRIX • 2026 EDITION</div>
+            <div class="bp-tag">RS LOGISTICS MATRIX • 2026 EDITION</div>
             <h1 class="bp-title">Volumetric Freight Optimization & Packaging Guide</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Manual to Dimensional Weight Formulas, Carton Optimization & Air Cargo Savings</h3>
             <div class="bp-callout cyan">
@@ -2373,7 +2394,7 @@ function updateCartThreshold(cartTotalCents) {
         chapterSubtitle: 'The 100-Point Quantitative Model for Evaluating Product Market Viability',
         content: `
           <div class="bp-cover-box">
-            <div class="bp-tag">AETHERDROP RESEARCH MATRIX • 2026 EDITION</div>
+            <div class="bp-tag">RS RESEARCH MATRIX • 2026 EDITION</div>
             <h1 class="bp-title">100-Point Blue Ocean Niche Feasibility Scorecard</h1>
             <h3 class="bp-subtitle">The Complete 10-Page Evaluation Framework for Scoring Market Viability & Saturation</h3>
             <div class="bp-callout cyan">
@@ -2409,7 +2430,7 @@ function updateCartThreshold(cartTotalCents) {
 
 window.STARTER_VAULT_DATA = {
   id: 'starter-vault-master',
-  title: 'AetherDrop 7-Figure Dropshipping Starter Pack & Master Operating System',
+  title: 'RS 7-Figure Dropshipping Starter Pack & Master Operating System',
   badge: 'Complete 10-Page Master System • 2026 Edition',
   category: 'vault',
   readTime: '60 min full masterclass',
@@ -2421,7 +2442,7 @@ window.STARTER_VAULT_DATA = {
       chapterSubtitle: 'The Comprehensive 10-Page Blueprint, Supplier Contacts, Margin Calculators & Launch SOPs',
       content: `
         <div class="bp-cover-box">
-          <div class="bp-tag">AETHERDROP MASTER VAULT • 2026 EDITION</div>
+          <div class="bp-tag">RS MASTER VAULT • 2026 EDITION</div>
           <h1 class="bp-title">7-Figure Dropshipping Starter Pack & Master Operating System</h1>
           <h3 class="bp-subtitle">The Complete 10-Page Turnkey Resource Guide: Verified Private Agents, Financial Models, Winning Product Filters & Ad Frameworks</h3>
           
